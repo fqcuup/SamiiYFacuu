@@ -4,7 +4,6 @@ body {
     background-color: white;
     color: #333;
 }
-
 header {
     background-color: #004aad;
     color: white;
@@ -102,22 +101,59 @@ nav a:hover {
     margin: 0.5rem auto 0;
     border-radius: 2px;
 }
+.muestra-anual {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  border-top: 5px solid #ffa500;
+}
+
+.muestra-anual h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 1rem;
+}
+
+.muestra-anual p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.muestra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.muestra-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.muestra-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin: 2rem
 }
-
 .card {
     background-color: #fff;
     border-radius: 15px;
     padding: 1.5rem;
-    text-align: center;
+    text-align: justify;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
@@ -135,12 +171,50 @@ nav a:hover {
     font-size: 1.3rem;
     color: #004aad;
 }
+.card h3 {
+    min-height: 50px; /* ajusta este número si querés */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .card p {
     font-size: 0.95rem;
     color: #555;
     margin-top: 0.5rem;
 }
+.card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    margin-top: 0.8rem;
+
+    background: linear-gradient(135deg, #fff7d9, #e8f0ff);
+
+    border-left: 5px solid #ffa500;
+    border-right: 5px solid #004aad;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover p {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+}
+.card h3 {
+    font-size: 1.55rem;
+    font-weight: 900;
+    color: #004aad;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+
 .historia, .informacion, .robotica {
     margin: 2rem;
     padding: 1rem;
@@ -286,6 +360,58 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
+.robotica {
+    margin: 2rem;
+    padding: 1.5rem;
+
+    width: auto;
+
+    background-color: #e6f0ff;
+
+    border-left: 8px solid #ffa500;
+    border-radius: 8px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.20);
+
+    text-align: left;
+}
+
+.robotica h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #004aad;
+    margin-bottom: 1rem;
+
+    text-shadow: 0px 0px 8px rgba(0, 74, 173, 0.35), 
+                 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.robotica p {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #222;
+
+    background: linear-gradient(135deg, #fff4c4, #ffe8a0);
+
+    padding: 1rem;
+    border-radius: 10px;
+
+    border-left: 6px solid #ffa500;
+    border-right: 6px solid #004aad;
+
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+
+    transition: 0.25s ease;
+}
+
+.robotica p:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.35);
+}
+
+
 .momentos {
     text-align: center;
     padding: 3rem 1rem;
@@ -332,13 +458,61 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 .mision-vision {
-    background-color: #e6f0ff;
-    margin: 2rem;
-    padding: 1.5rem;
-    border-left: 5px solid #ffa500;
-    border-radius: 8px;
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 2rem;
+
+    background: linear-gradient(135deg, #ffffff, #e8f1ff);
+
+    border-left: 8px solid #ffa500;
+    border-right: 8px solid #004aad;
+    border-radius: 15px;
+
     text-align: center;
-  }
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mision-vision:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.30);
+}
+
+.mision-vision h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #004aad;
+    margin-bottom: 1.5rem;
+    text-shadow: 0px 0px 8px rgba(0, 74, 173, 0.35), 
+                 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mision-vision p {
+    background: linear-gradient(135deg, #fff4c4, #ffe8a0);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #222;
+
+    border-left: 6px solid #ffa500;
+    border-right: 6px solid #004aad;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mision-vision p:hover {
+    transform: scale(1.03);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.35);
+}
+
   
   .mision-vision p {
     font-size: 1.1rem;
@@ -403,6 +577,34 @@ footer {
 .info-card ul {
     list-style: none;
     padding: 0;
+}
+.informacion h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #004aad;
+    text-shadow: 0px 0px 8px rgba(0, 74, 173, 0.35), 
+                 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.informacion li {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #222;
+    padding: 1rem;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #fff4c4, #ffe8a0);
+
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+
+    border-left: 6px solid #ffa500;
+    border-right: 6px solid #004aad;
+
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+.informacion li:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 22px rgba(0,0,0,0.30);
+    transition: 0.25s ease;
 }
 
 .btn-link {
